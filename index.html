@@ -7,6 +7,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
     <script src="./lib/timer.js"></script>
     <div ng-controller="TimerCntl">
+      <input ng-model="target_seconds" type="number" min="1" step="1" value="60">
+      <button ng-click="start_reset()">{{ start_reset_label() }}</button>
       <h1>{{ time }}</h1>
     </div>
   </body>
